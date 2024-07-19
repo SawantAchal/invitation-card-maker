@@ -2,6 +2,8 @@
 
 This project is an online invitation card creator that allows users to select card images, add and style text, and download the final card as an image. The project is built using HTML, CSS, and JavaScript and is designed to be responsive for both desktop and mobile screens.
 
+See Live - https://invitation-card-maker-blush.vercel.app/
+
 ## Features
 
 1. Card Selection: Users can choose from a set of predefined card images.
@@ -52,7 +54,8 @@ A web browser (Chrome, Firefox, Safari, etc.)
 3. The application will load, and you can start creating your invitation card.
 
 ## Project Structure
+1.index.html: The main HTML file containing the structure of the application.
 
-index.html: The main HTML file containing the structure of the application.
-style.css: The CSS file containing styles for the application.
-script.js: The JavaScript file containing the logic for the application.
+2.style.css: The CSS file containing styles for the application.
+
+3.script.js: The JavaScript file containing the logic for the application.
