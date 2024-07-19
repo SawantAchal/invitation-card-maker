@@ -13,7 +13,7 @@ See Live - https://invitation-card-maker-blush.vercel.app/
 5. Drag and Drop: Users can drag and position the text elements anywhere on the card.
 6. Undo/Redo: Users can undo and redo their changes.
 7. Download Card: Users can download the final card as a PNG image.
-8. Responsive Design: The layout is responsive for large and medium screens, with a user-friendly design that includes horizontal scrolling for card images.
+8. Responsive Design: TThe layout is responsive, with a mobile-friendly design that includes horizontal scrolling for card images.
 
 ## Usage
 
