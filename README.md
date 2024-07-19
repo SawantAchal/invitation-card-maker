@@ -54,7 +54,8 @@ A web browser (Chrome, Firefox, Safari, etc.)
 3. The application will load, and you can start creating your invitation card.
 
 ## Project Structure
+1.index.html: The main HTML file containing the structure of the application.
 
-index.html: The main HTML file containing the structure of the application.
-style.css: The CSS file containing styles for the application.
-script.js: The JavaScript file containing the logic for the application.
+2.style.css: The CSS file containing styles for the application.
+
+3.script.js: The JavaScript file containing the logic for the application.
