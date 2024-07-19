@@ -1,0 +1,256 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 5%;
+}
+
+.card-selection {
+    flex: 1;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-right: 1px solid #ddd;
+    overflow-y: auto;
+    max-height: 100vh;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.card {
+    width: 100%;
+    height: auto;
+    margin-top:2vh ;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.editor {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.control-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.undo{
+    background-color: red;
+}
+
+.redo{
+    background-color: #28a745;
+}
+
+.undo:hover{
+    background-color: rgb(146, 28, 28);
+}
+
+.redo:hover{
+    background-color: #135f24;
+}
+
+.card-container {
+    position: relative;
+    width: 400px;
+    height: 600px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+#selected-card {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#text-container {
+    position: absolute;
+    text-align: center;
+    top: 100px;
+    left: 100px;
+    color: rgb(23, 39, 85);
+    font-size: 24px;
+    cursor: move;
+    outline: none;
+    transition: all 0.3s ease;
+    z-index: 10;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#text-container:hover{
+    border: 1px solid gray;
+    padding: 1%;
+}
+.settings {
+    flex: 1;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-left: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    overflow-y: auto;
+}
+
+.style{
+    display: flex;
+    justify-content:space-around;
+}
+
+.size-settings , .text-settings{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
+}
+
+.font-settings,
+.color-settings
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2px;
+}
+
+input{
+    height: 4vh;
+}
+label {
+    display: block;
+}
+
+select,
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    /* margin-bottom: 10px; */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+option ,#font-selector{
+    font-size: 18px;
+}
+
+.download-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.download-btn:hover {
+    background-color: #218838;
+}
+
+
+.text-style-settings {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.style-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 18px;
+    border-radius: 4px;
+}
+
+.style-btn:hover {
+    background-color: #0056b3;
+}
+
+
+.add-text-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 18px;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.add-text-btn:hover {
+    background-color: #0056b3;
+}
+
+.text-element {
+    position: absolute;
+    text-align: center;
+    color: rgb(23, 39, 85);
+    font-size: 24px;
+    cursor: move;
+    outline: none;
+    transition: all 0.3s ease;
+    z-index: 10;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.text-element:hover {
+    border: 1px solid gray;
+    padding: 1%;
+}

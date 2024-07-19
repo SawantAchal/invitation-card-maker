@@ -3,9 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Invitation card Maker</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <title>Online Invitation Card</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="container">
+        <div class="card-selection">
+            <h3>Select card from here : </h3>
+            <div class="cards">
+                <img src="images/img1.jpg" alt="Card 1" class="card" onclick="selectCard(this)">
+                <img src="images/img2.jpg" alt="Card 2" class="card" onclick="selectCard(this)">
+                <img src="images/img3.jpg" alt="Card 1" class="card" onclick="selectCard(this)">
+                <img src="images/img4.jpg" alt="Card 2" class="card" onclick="selectCard(this)">
+                <img src="images/img5.jpg" alt="Card 1" class="card" onclick="selectCard(this)">
+                <img src="images/img6.jpg" alt="Card 2" class="card" onclick="selectCard(this)">
+                <img src="images/img7.jpg" alt="Card 2" class="card" onclick="selectCard(this)">
+                <img src="images/img8.jpg" alt="Card 2" class="card" onclick="selectCard(this)">
+                <img src="images/img9.jpg" alt="Card 2" class="card" onclick="selectCard(this)">
+                <img src="images/img10.jpg" alt="Card 2" class="card" onclick="selectCard(this)">
+            </div>
+        </div>
+        <div class="editor">
+            <div class="controls">
+                <button class="control-btn undo" onclick="undo()"><i class="fa-solid fa-arrow-rotate-left"></i> Undo</button>
+                <button class="control-btn redo" onclick="redo()"><i class="fa-solid fa-arrow-rotate-right"></i> Redo</button>
+            </div>
+            <div class="card-container">
+                <img id="selected-card" src="images/img1.jpg" alt="Selected Card">
+                <div id="text-container" contenteditable="true" >Enter you text here</div>
+            </div>
+        </div>
+        <div class="settings">
+            <div class="font-settings">
+                <label for="font-selector">Font:</label>
+                <select id="font-selector" onchange="changeFont(this.value)">
+                    <option value="Arial">Arial</option>
+                    <option value="Verdana">Verdana</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                    <option value="Courier New">Courier New</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Palatino">Palatino</option>
+                    <option value="Comic Sans MS">Comic Sans MS</option>
+                    <option value="Impact">Impact</option>
+                    <option value="Lucida Sans Unicode">Lucida Sans Unicode</option>
+                    <option value="Tahoma">Tahoma</option>
+                    <option value="Trebuchet MS">Trebuchet MS</option>
+                    <option value="Arial Black">Arial Black</option>
+                    <option value="Gill Sans">Gill Sans</option>
+                    <option value="Helvetica">Helvetica</option>
+                    <option value="Century Gothic">Century Gothic</option>
+                    <option value="Calibri">Calibri</option>
+                    <option value="Cambria">Cambria</option>
+                    <option value="Garamond">Garamond</option>
+                    <option value="Perpetua">Perpetua</option>
+                    <option value="Rockwell">Rockwell</option>
+                    <option value="Segoe UI">Segoe UI</option>
+                    <option value="Brush Script MT">Brush Script MT</option>
+                    <option value="Franklin Gothic Medium">Franklin Gothic Medium</option>
+                </select>
+            </div>
+            <div class="style">
+                <div class="color-settings">
+                    <label for="color-selector">Color:</label>
+                    <input type="color" id="color-selector" onchange="changeColor(this.value)">
+                </div>
+                <div class="size-settings">
+                    <label for="size-selector">Size:</label>
+                    <input type="number" id="size-selector" value="24" min="10" max="72" onchange="changeSize(this.value)">
+                </div>
+            </div>
+            <div class="text-style-settings">
+                <button class="style-btn" onclick="toggleBold()"><i class="fas fa-bold"></i></button>
+                <button class="style-btn" onclick="toggleItalic()"><i class="fas fa-italic"></i></button>
+            </div>
+            <div class="text-settings">
+                <button class="add-text-btn" onclick="addText()">Add Text</button>
+            </div>
+            <button class="download-btn" onclick="downloadCard()">Download</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
